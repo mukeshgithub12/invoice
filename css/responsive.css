@@ -1,0 +1,15 @@
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .container-out-section {
+        margin-top: 1.5rem;
+        padding:0px;
+    }
+    .table-body-color {
+        background-color: #f1efef;
+        padding: 10px;
+        margin-right: -78rem;
+    }
+    .wrapper{
+        margin-right: 6rem;
+    }
+}

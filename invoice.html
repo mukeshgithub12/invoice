@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!---sweet alert2 ------>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <!---sweet alert2  end------>
+
+    <script src="js/invoice.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- header-top -->
+    <!-- <div class="header-img">
+        <img src="img/header.png" class="img-fluid" alt="Responsive image">
+    </div> -->
+    <!-- header-top-end -->
+
+
+    <div class="container-out-section">
+        <div class="container-fluid">
+            <div class="table-body-color" style="border-top: 6px solid #ddd;">
+                <form>
+                    <span class="border-space-sty">Invoice Information</span>
+                    <div class="section-invoice-one">
+                        <div class="invoice-info-border">
+                            <!------- Row 1 --------->
+                            <div class="row pt-2">
+                                <div class="col col1">
+                                    <label for="option">Email address</label>
+                                    <select class="form-control form-control-sm bglightgray">
+                                        <option>GST</option>
+                                        <option>Lorem</option>
+                                        <option>Lorem</option>
+                                        <option>Lorem</option>
+                                    </select>
+                                </div>
+                                <div class="col col2">
+
+                                    <label for="formGroupExampleInput">Invoice No.</label>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="GST-001">
+
+                                </div>
+                                <div class="col col3">
+                                    <label for="formGroupExampleInput">Date</label>
+                                    <input type="date" value="2019-04-15" class="form-control form-control-sm" id="mydate">
+                                </div>
+                                <div class="col col4"> <label for="option">Place of Supply</label>
+                                    <select class="form-control form-control-sm">
+                                        <option>Punjab</option>
+                                        <option>Lorem</option>
+                                        <option>Lorem</option>
+                                        <option>Lorem</option>
+                                    </select>
+                                </div>
+                                <div class="col col5">
+                                    <span class="border-space-sty">Bill To</span><br>
+                                    <div class="form-check form-check-inline mt-2">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                        <label class="form-check-label" for="inlineRadio1">Cash A/c</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">Client A/c</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--------- Row 1 End --------->
+
+                            <!--------- Row 2 --------->
+                            <div class="row mt-3">
+                                <div class="col col1">
+                                    <label for="option">Contact No.</label>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="col col2">
+                                    <label for="formGroupExampleInput">Client Name</label>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="CASH">
+                                </div>
+                                <div class="col col3">
+                                    <label for="formGroupExampleInput">Address</label>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="col col4"> <label for="option">Client GSTIN</label>
+                                    <label for="formGroupExampleInput">Invoice No.</label>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="col col5">
+                                    <label for="option">Sold By</label>
+                                    <select class="form-control form-control-sm bglightgray">
+                                        <option>Select</option>
+                                        <option>Lorem</option>
+                                        <option>Lorem</option>
+                                        <option>Lorem</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--------- Row 2 End --------->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="table-body-color">
+                <form>
+                    <span class="border-space-sty">Particulars</span>
+                    <div class="section-invoice-one">
+                        <div class="invoice-info-border">
+                            <!------- Row 3 --------->
+                            <form>
+                                <div class="row pt-2">
+                                    <div class="col col1">
+                                        <div class="form-check form-check-inline mt-2">
+                                            <input class="form-check-input" type="radio" name="itemtag" value="Item Tag" checked id="inlineRadio3">
+                                            <label class="form-check-label" for="inlineRadio3" name="itemtag">Item
+                                                Tag</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="itemtag" value="Item Tag" id="inlineRadio4">
+                                            <label class="form-check-label" for="inlineRadio4" name="itemtag">Item
+                                                Code</label>
+                                        </div>
+                                    </div>
+                                    <div class="col col2">
+                                        <label for="formGroupExampleInput">Item Name</label> <a data-toggle="modal" data-target=".bd-example-modal-lg" id="add-item-id" href="#!" class="float-right text-primary"><u>Add</u></a>
+                                        <input type="text" class="form-control form-control-sm" name="itemname" id="formGroupExampleInput" placeholder="">
+                                    </div>
+                                    <div class="col col4"> <label for="option">Unit</label>
+                                        <select class="form-control form-control-sm" id="unit">
+                                            <option value="OTH">OTH</option>
+                                            <option value="YDS">YDS</option>
+                                            <option value="UNT">UNT</option>
+                                            <option value="TON">TON</option>
+                                            <option value="TBS">TBS</option>
+                                            <option value="SQY">SQY</option>
+                                            <option value="SQM">SQM</option>
+                                            <option value="SQF">SQF</option>
+                                            <option value="SET">SET</option>
+                                            <option value="ROL">ROL</option>
+                                            <option value="QTL">QTL</option>
+                                            <option value="PCS">PCS</option>
+                                            <option value="PAC">PAC</option>
+                                            <option value="NOS">NOS</option>
+                                            <option value="MTR">MTR</option>
+                                            <option value="MLT">MLT</option>
+                                            <option value="KLR">KLR</option>
+                                            <option value="KGS">KGS</option>
+                                            <option value="GMS">GMS</option>
+                                            <option value="DOG">DOG</option>
+                                            <option value="CTN">CTN</option>
+                                            <option value="CMS">CMS</option>
+                                            <option value="CCM">CCM</option>
+                                            <option value="CBM">CBM</option>
+                                            <option value="CAN">CAN</option>
+                                            <option value="BTL">BTL</option>
+                                            <option value="BOX">BOX</option>
+                                            <option value="BKL">BKL</option>
+                                            <option value="BDL">BDL</option>
+                                            <option value="BAL">BAL</option>
+                                            <option value="BAG">BAG</option>
+                                        </select>
+                                    </div>
+                                    <div class="col col2">
+                                        <label for="formGroupExampleInput">Quantity</label>
+                                        <input type="text" class="form-control form-control-sm" name="quantity" id="formGroupExampleInput" placeholder="">
+                                    </div>
+                                    <div class="col col5">
+                                        <div class="col col2">
+                                            <label for="formGroupExampleInput">Sale Price</label>
+                                            <i class="fa fa-calculator float-right" id="iconfont" aria-hidden="true"></i>
+                                            <input type="text" class="form-control form-control-sm withsty" id="formGroupExampleInput" name="saleprice" placeholder="">
+                                            <div class="input-icons-sty">
+                                                <div class="iconabs">
+                                                    <i class="fa fa-inr" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col5">
+                                        <div class="col col2">
+                                            <label for="formGroupExampleInput">Disc (%)</label>
+                                            <i class="fa fa-calculator float-right" id="iconfont" aria-hidden="true"></i>
+                                            <input type="text" class="form-control form-control-sm" name="disc" id="formGroupExampleInput" placeholder="">
+                                            <div class="input-icons-sty-right">
+                                                <div class="iconabs">
+                                                    <i class="fa fa-percent" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col4"> <label for="option">Tax(%)</label>
+                                        <select class="form-control form-control-sm" id="tax">
+                                            <option value="14">14</option>
+                                            <option value="20">20</option>
+                                            <option value="25">25</option>
+                                            <option value="27">27</option>
+                                        </select>
+                                    </div>
+                                    <div class="col col5">
+                                        <div class="col col2">
+                                            <label for="formGroupExampleInput">Cess (%)</label>
+                                            <input type="number" class="form-control form-control-sm" id="formGroupExampleInput" name="cess" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col col5">
+                                        <div class="col col2">
+                                            <label for="formGroupExampleInput">Amount</label> <span title="Add Amount" id="rupee-icon"><i class="fa fa-plus" id="addamt"
+                                                    aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control form-control-sm withsty" id="formGroupExampleInput" name="amount" placeholder="">
+                                            <div class="input-icons-sty">
+                                                <div class="iconabs">
+                                                    <i class="fa fa-inr" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                          
+                            <!--------- Row 3 End --------->
+
+                            <!--------- Row 4 --------->
+
+                            <!-- <span id="moreoption"><i class="fa fa-chevron-circle-down" title="Click More" aria-hidden="true" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></i></span> -->
+                            <div id="collapseExample" class="row mt-2">  <!----- collapse class-->
+                                <div class="col-md-2">
+                                    <label for="formGroupExampleInput">Serial No.</label>
+                                    <input type="text" class="form-control form-control-sm width-sty-serial" id="formGroupExampleInput" placeholder="">
+                                    <div class="input-icons-sty">
+                                        <div class="iconabs">
+                                            <i class="fa fa-list-ol" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control form-control-sm item-desc" id="formGroupExampleInput" placeholder="Item description">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="formGroupExampleInput">Serial No.</label>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <!--------- Row 4 End --------->
+
+                            <!------------- table ---------->
+                            <div id="table-body-scroll">
+                                <table id="myTable" class="table-bordered" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="w-25">Item Name</th>
+                                            <th scope="col">Tag</th>
+                                            <th scope="col">Unit</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Unit Price</th>
+                                            <th scope="col">Disc (%)</th>
+                                            <th scope="col">Tax (%)</th>
+                                            <th scope="col">Cess (%)</th>
+                                            <th scope="col">Net Price</th>
+                                            <th scope="col">Amount Before Tax</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-scroll">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!------------- table ---------->
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="vertical-tab">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="btnstyspace">
+                        <button class="btn focussty btn-sm" data-target-tab="#discount">Discount Discription</button>
+                        <button class="btn focussty btn-sm active" data-target-tab="#shipping">Add Shipping</button>
+                        <button class="btn focussty btn-sm" data-target-tab="#payment">Payment</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="item" id="discount">
+
+                                <div id="#">
+                                    <div class="cheackbox-part-icon d-flex justify-content-around align-items-center">
+                                        <div class="bell-icon">
+                                            <i class="fa fa-bell" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label ml-2" for="defaultCheck1">
+                                            Apply discount to all
+                                        </label>
+                                        </div>
+                                    </div>
+                                    <div class="delivery-term">
+                                        <span class="border-space-sty">Delivery Terms</span>
+                                        <div class="text-box-terms">
+                                            <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item active" id="shipping">
+    
+                                <div id="">
+                                    <div class="cheackbox-part-icon">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                            <label class="form-check-label ml-2" for="defaultCheck2">
+                                            Add reference
+                                        </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                            <label class="form-check-label ml-2" for="defaultCheck3">
+                                            Add shipping
+                                        </label>
+                                        </div>
+                                        <div class="delivery-term">
+                                            <span class="border-space-sty">Remarks (Private Use)</span>
+                                            <div class="text-box-terms">
+                                                <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item p-0" id="payment">
+    
+                                <div id="">
+                                    <span class="border-space-sty">Payment</span>
+                                    <div class="payment-part">
+                                        <div class="date-part d-flex justify-content-between">
+                                            <label for="mydate">Date</label>
+                                            <input type="date" value="2019-04-15" class="form-control w-75 form-control-sm" id="mydate">
+                                        </div>
+                                        <div class="cash-part d-flex justify-content-between mt-2">
+                                            <label for="select-option">Mode</label>
+                                            <select class="form-control form-control-sm bglightgray w-75">
+                                            <option>Cash</option>
+                                            <option>Prepaid</option>
+                                        </select>
+                                        </div>
+                                        <div class="txn-part d-flex justify-content-between mt-2">
+                                            <label for="id">Txn. ID</label>
+                                            <input type="text" class="form-control form-control-sm w-75" id="formGroupExampleInput" placeholder="">
+                                        </div>
+                                        <div class="amount-part justify-content-between mt-2">
+                                            <label for="id">Amount</label>
+                                            <input type="text" class="form-control form-control-sm withsty" id="formGroupExampleInput" placeholder="0">
+                                            <div class="input-icons-inr">
+                                                <div class="iconabs">
+                                                    <i class="fa fa-inr" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="balance-part justify-content-between mt-2">
+                                            <label for="id">Balance</label>
+                                            <input type="text" class="form-control form-control-sm withsty" id="formGroupExampleInput" placeholder="0">
+                                            <div class="input-icons-bal">
+                                                <div class="iconabs">
+                                                    <i class="fa fa-inr" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div> -->
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="bgstylesection">
+                        <div class="sub-total d-flex justify-content-between font-weight-bold">
+                            <p>Sub Total</p>
+                            <div class="sub-icon">
+                                <i class="fa fa-inr" aria-hidden="true"></i> 0.00
+                            </div>
+                        </div>
+                        <div class="sub-total d-flex justify-content-between font-weight-bold">
+                            <p>TOTAL AMOUNT</p>
+                            <div class="sub-icon">
+                                <i class="fa fa-inr" aria-hidden="true"></i> 0.00
+                            </div>
+                        </div>
+                        <div class="button-save-border d-flex justify-content-around">
+                            <span><a class="btn btn-primary rounded-0 btncolorsave" href="#!"><i class="fa fa-print"
+                                aria-hidden="true"></i> Save and Print</a></span>
+                            <span><a class="btn btn-primary rounded-0 bg-secondary border-0" href="#!"><i
+                                class="fa fa-floppy-o" aria-hidden="true"></i></i> Save</a></span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------- add item section ----------->
+            <!------------- add item section ----------->
+        </div>
+    </div>
+
+
+    <!-- <div class="footer-img">
+        <div class="container-fluid">
+        <div class="footer-content"><i class="fa fa-question-circle" aria-hidden="true"></i>  Zen Assistant</div>
+    </div>
+    </div> -->
+
+
+
+    <!-- Large modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div id="add-item-card" class="table-body-color">
+                    <h5>Add New Product</h5>
+                    <div class="row">
+                        <div class="col col1">
+                            <span class="border-space-sty">Product Deatails</span>
+                            <div class="add-item-part">
+                                <div class="cash-part d-flex justify-content-between mt-2">
+                                    <label for="select-option">Group</label>
+                                    <select class="form-control form-control-sm w-75">
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="brand-part d-flex justify-content-between mt-2">
+                                    <label for="select-option">Brand</label>
+                                    <select class="form-control form-control-sm w-75">
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="item code-part d-flex justify-content-between mt-2 p-0">
+                                    <label for="id">Item Code</label>
+                                    <input type="text" class="form-control form-control-sm w-75" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="product-part d-flex justify-content-between mt-2">
+                                    <label for="id">Product</label>
+                                    <input type="text" class="form-control form-control-sm w-75" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="print-name d-flex justify-content-between mt-2">
+                                    <label for="id">Print Name</label>
+                                    <input type="text" class="form-control form-control-sm w-75" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col col2"></div> -->
+                        <div class="col col2">
+                            <span class="border-space-sty">Product Deatails</span>
+                            <div class="gst-deatails">
+                                <div class="hsn-hac d-flex justify-content-between mt-2">
+                                    <label for="id">HSN / SAC Code</label>
+                                    <input type="text" class="form-control form-control-sm w-75" id="formGroupExampleInput" placeholder="">
+                                </div>
+
+                                <div class="gst-rates d-flex justify-content-between mt-2">
+
+                                    <label for="id">GST Rates</label>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                </div>
+
+                                <div class="input-lablegst d-flex justify-content-between mt-2">
+
+                                    <label for="id"></label>
+                                    <input type="text" class="form-control form-control-sm position-input-sty" id="formGroupExampleInput" placeholder="">
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <span class="cgst-class">
+                                    SGST
+                                </span>
+                                <span class="cgst-class-inr"><i class="fa fa-percent" aria-hidden="true"></i></span>
+                                <span class="cgst-class-1">
+                                    CGST
+                                </span>
+                                <span class="cgst-class-inr-1"><i class="fa fa-percent" aria-hidden="true"></i></span>
+                                <span class="cgst-class-01">
+                                    Cess
+                                </span>
+                                <span class="cgst-class-inr-01"><i class="fa fa-percent" aria-hidden="true"></i></span>
+                                <span class="cgst-class-02">
+                                    IGST
+                                </span>
+                                <span class="cgst-class-inr-02"><i class="fa fa-percent" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col col1">
+                            <span class="border-space-sty">Price Details</span>
+                            <div class="add-item-part-3">
+                                <div class="product-part d-flex justify-content-between mt-2">
+                                    <label for="id">Purchase Price</label>
+                                    <i class="fa fa-inr purchase" aria-hidden="true"></i>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="print-name d-flex justify-content-between mt-2">
+                                    <label for="id">Sale Price</label>
+                                    <i class="fa fa-inr sale" aria-hidden="true"></i>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="print-name d-flex justify-content-between mt-2">
+                                    <label for="id">Min Sale Price</label>
+                                    <i class="fa fa-inr min-sale" aria-hidden="true"></i>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="print-name d-flex justify-content-between mt-2">
+                                    <label for="id">M.R.P</label>
+                                    <i class="fa fa-inr mrp" aria-hidden="true"></i>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col2">
+                            <span class="border-space-sty">Other Deatails</span>
+                            <div class="add-item-part-4">
+                                <div class="sale-discount-part d-flex justify-content-between mt-2">
+                                    <label for="id">Sale Discount</label>
+                                    <i class="fa fa-percent" aria-hidden="true"></i>
+                                    <input type="text" class="form-control form-control-sm w-75" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="sale-discount-part d-flex justify-content-between mt-2">
+                                    <label for="id">Low Level Limit</label>
+                                    <input type="text" class="form-control form-control-sm w-75" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="cash-part d-flex justify-content-between mt-2">
+                                    <label for="select-option">Product Type</label>
+                                    <select class="form-control form-control-sm bglightgray w-75">
+                                        <option>General</option>
+                                        <option>Apparel</option>
+                                        <option>Footware</option>
+                                    </select>
+                                </div>
+                                <div class="sale-discount-part d-flex justify-content-between mt-2">
+                                    <label for="id">Serial No.</label>
+                                    <input type="text" class="form-control form-control-sm w-75" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <span class="border-space-sty">Stock and Unite Details</span>
+                            <div class="add-item-part-5">
+
+                                <div class="unite-stock d-flex justify-content-between mt-2">
+                                    <label for="id">Unit</label>
+                                    <input type="text" class="form-control form-control-sm with-sty-stock" id="formGroupExampleInput" placeholder="">
+                                </div>
+                                <div class="open-value d-flex justify-content-between mt-2">
+                                    <label for="id">Opening Stock</label>
+                                    <input type="text" class="form-control form-control-sm with-sty-stock" id="formGroupExampleInput" placeholder="">
+                                </div>
+
+                                <div class="stock-value d-flex justify-content-between mt-2">
+                                    <label for="id">Opening Stock Value</label>
+                                    <i class="fa fa-inr open-stock-inr" aria-hidden="true"></i>
+                                    <input type="text" class="form-control form-control-sm stock-value-input" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col2">
+                            <span class="border-space-sty">Product Description</span>
+                            <div class="add-item-part-comment">
+                                <input type="text" class="form-control form-control-sm product-desc" id="formGroupExampleInput" placeholder="">
+                            </div>
+                            <span class="border-space-sty">Product Setting</span>
+                            <div class="add-item-part-checkbox">
+                                <div class="flex-sty-input d-flex justify-content-around">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label ml-2" for="flexCheckDefault">
+                                            Print Description
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label ml-2" for="flexCheckChecked">
+                                            One Click Sale
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                                        <label class="form-check-label ml-2" for="flexCheckDefault2">
+                                            Enable Tracking
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="flex-sty-input2 d-flex justify-content-around mt-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                                        <label class="form-check-label ml-2" for="flexCheckDefault3">
+                                            Print Serial No.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+                                        <label class="form-check-label ml-2" for="flexCheckDefault4">
+                                            <span class="text-danger"></span>Not For Sale</span>
+                                        </label>
+                                    </div>
+                                    <div class="button-save-border d-flex justify-content-between">
+                                        <a class="btn btn-primary rounded-0 btncolorsave" href="#!"><i
+                                                class="fa fa-print" aria-hidden="true"></i> Save</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(function() {
+            $("#rupee-icon").click(function() {
+                var _itemtag = $('input[name="itemtag"]').val();
+                var _itemname = $('input[name="itemname"]').val();
+                var unte = $('#unit').val();
+                var _saleprice = $('input[name="saleprice"]').val();
+                var _quantity = $('input[name="quantity"]').val();
+                var _disc = $('input[name="disc"]').val();
+                var tax = $('#tax').val();
+                var _cess = $('input[name="cess"]').val();
+                var _amount = $('input[name="amount"]').val();
+
+                var _tr = '<tr> <td>' + _itemname + '</td> <td>' + _itemtag +
+                    '</td>  <td>' + unte + '</td> <td>' + _saleprice +
+                    '</td> <td>' + _quantity + '</td> <td>' + _disc +
+                    '</td> <td>' + tax + '</td> <td>' + _cess + '</td> <td>' +
+                    _amount + '</td> </tr>'
+
+                $("tbody").append(_tr);
+            })
+        })
+    </script>
+
+    <script>
+        document.querySelector("#rupee-icon").addEventListener('click', function() {
+            Swal.fire(
+                'Data Added',
+                'You clicked the ok!',
+                'success'
+            )
+        });
+    </script>
+
+    <script>
+        const btns = document.querySelectorAll("[data-target-tab]");
+
+        btns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                btns.forEach((btn) => btn.classList.remove("active"));
+
+                const items = document.querySelectorAll(".item");
+
+                items.forEach((item) => item.classList.remove("active"));
+                btn.classList.add("active");
+                document.querySelector(btn.dataset.targetTab).classList.add("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
